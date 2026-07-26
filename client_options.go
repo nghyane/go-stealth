@@ -51,7 +51,7 @@ func defaultConfig() *clientConfig {
 		// to eliminate. The newer Chrome profiles (144/146) remain available
 		// via explicit WithProfile; flip this default only in the same
 		// coordinated change that bumps every consumer's pinned UA.
-		profile:         ProfileChrome131,
+		profile:         ProfileChrome146,
 		timeout:         20,
 		dialControl:     defaultDenyDial,
 		redirectGuard:   defaultDenyRedirect,
