@@ -171,12 +171,14 @@ func (t *tlsClientDoer) GetCookieValue(rawURL, name string) string {
 }
 
 // profileMap maps go-stealth TLSProfile values to bogdanfinn profiles.
+// Chrome_150: bogdanfinn/tls-client@b790a31 (PR #259, Jul 2026) — true Hello 150
+// (no longer alias to Chrome_146).
 var profileMap = map[TLSProfile]profiles.ClientProfile{
 	ProfileChrome131:   profiles.Chrome_131,
 	ProfileChrome133:   profiles.Chrome_133,
 	ProfileChrome144:   profiles.Chrome_144,
 	ProfileChrome146:   profiles.Chrome_146,
-	ProfileChrome150:   profiles.Chrome_146, // Chrome 150 → use 146 profile (closest available)
+	ProfileChrome150:   profiles.Chrome_150,
 	ProfileFirefox133:  profiles.Firefox_133,
 	ProfileFirefox148:  profiles.Firefox_148,
 	ProfileBrave146:    profiles.Brave_146,
